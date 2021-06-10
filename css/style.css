@@ -653,12 +653,14 @@ a {
   left: 0;
   bottom: 0;
   transform: translateY(100%);
+  opacity: 0;
   height: 100%;
   width: 100%;
   padding: 63px 24px;
   background-color: var(--project-description-background);
 
-  transition: transform 250ms var(--transition-cubic);
+  transition: transform 250ms var(--transition-cubic),
+    opacity 250ms var(--transition-cubic);
 
   font-weight: 400;
   font-size: 18px;
@@ -670,6 +672,7 @@ a {
 .project-item:hover .project-description,
 .project-item:focus .project-description {
   transform: translateY(0);
+  opacity: 1;
 }
 
 .project-item .content {
